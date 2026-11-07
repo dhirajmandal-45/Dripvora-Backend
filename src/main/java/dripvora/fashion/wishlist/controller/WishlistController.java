@@ -1,0 +1,4 @@
+package dripvora.fashion.wishlist.controller;
+import org.springframework.security.core.Authentication; import org.springframework.web.bind.annotation.*; import java.util.*; import dripvora.fashion.wishlist.entity.WishlistItem; import dripvora.fashion.wishlist.service.WishlistService;
+@RestController @RequestMapping("/dripora/wishlist")
+public class WishlistController{private final WishlistService s;public WishlistController(WishlistService s){this.s=s;}@GetMapping public List<WishlistItem> get(Authentication a){return s.get(a.getName());}@PostMapping("/{productId}") public WishlistItem add(Authentication a,@PathVariable Long productId){return s.add(a.getName(),productId);}@DeleteMapping("/{productId}") public void remove(Authentication a,@PathVariable Long productId){s.remove(a.getName(),productId);}}

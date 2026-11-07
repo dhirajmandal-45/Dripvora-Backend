@@ -1,0 +1,61 @@
+```gitignore
+# ==========================================
+# ENVIRONMENT VARIABLES & SECRETS
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# Local application configuration
+application-local.properties
+application-local.yml
+application-secret.properties
+
+# ==========================================
+# BUILD FILES
+# ==========================================
+target/
+build/
+out/
+
+# ==========================================
+# JAVA
+# ==========================================
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# ==========================================
+# IDE
+# ==========================================
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# ==========================================
+# LOGS
+# ==========================================
+*.log
+logs/
+
+# ==========================================
+# OS FILES
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
